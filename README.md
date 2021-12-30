@@ -1,1 +1,2 @@
-# web-proga
+# desktop-tutorial
+GitHub Desktop tutorial repository

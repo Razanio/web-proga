@@ -1,0 +1,75 @@
+$divBackgroundColor: #91B4C7;
+$divHeaderColor: #48758E;
+$navBarHover: #95C8E3;
+
+$h1FontFamily:'Marko One', serif;
+$textFontFamily:'Roboto', sans-serif;
+$fontColorLight: #fff;
+$fontColorDark: #000;
+
+$buttonColor:#FFFFFF;
+$buttonHover:#EEEEEE;
+$buttonClick:#CCCCCC;
+
+$inputBorder:#000000;
+$inputHoverBorder:#00639A;
+$inputClickBorder: #48758E;
+$inputErrorButtonColor: #FF8F8F; 
+
+body{
+    margin: 0;
+    background-color: #95C8E3;
+}
+main{
+    position: relative;
+    top: 70px;
+    overflow: hidden;
+    min-height: calc(100vh - 70px);
+}
+input{
+    border-radius: 10px;
+    border: 2px solid #000000;
+    &:hover{
+       border: 2px solid #00639A;
+    }
+    &:focus{
+        border: 2px solid #48758E;
+    }
+}
+ button{
+    border-radius: 10px;
+    background-color: #fff;
+    border: 2px solid #000000;
+    &:hover{
+        background-color: #EEEEEE;
+     }
+     &:focus{
+        background-color: #CCCCCC;
+     }
+}
+.table{
+    width: 100%;
+    border-spacing: 0 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;  
+    table{
+        width: 100%;
+        box-sizing: border-box;
+        tr{
+            th{
+                padding: 10px 20px;
+                background: #48758E;
+                color: #fff;
+                font-size: 0.9em;
+            }
+            td {
+                vertical-align: middle;
+                padding: 10px;
+                font-size: 14px;
+                text-align: center;
+                border-bottom: 2px solid #56433D;
+                border-right: 2px solid #56433D;
+                }
+        }
+    }
+}
