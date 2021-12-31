@@ -1,422 +1,669 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./style/main.css" />
-  </head>
-  <body>
-    <header class="header">
-      <div class="header__flexbox">
-        <div class="header__logo--left">
-          <img
-            class="header__image"
-            src="./image/icon/logo.png"
-            width="62px"
-            height="62px"
-            alt="logo"
-          />
-          <h2 class="header__label">Taxeria</h2>
-        </div>
-        <nav class="header__navigation">
-          <a href="#main" class="header__anchor">Главная</a>
-          <a href="#traffic" class="header__anchor">Тарифы</a>
-          <a href="#work" class="header__anchor">Работа</a>
-          <a href="#review" class="header__anchor">Отзывы</a>
-          <a href="#contacts" class="header__anchor">Контакты</a>
-        </nav>
-        <div class="header__authorization-active">
-          <button class="header__button" onclick="gotoPage('./pages/authorization.html')">
-            Войти
-          </button>
-        </div>
-        <div class="header__authorization-disable">
-          <p
-            id="p1"
-            class="header__paragraph"
-            onclick="gotoPage('./pages/personalOffise.html')"
-          >
-            Имя пользователя
-          </p>
-          <button class="header__button" onclick="logOut()">
-            Выйти
-          </button>
-        </div>
-      </div>
-    </header>
-    <header class="header-small">
-      <div class="header__flexbox">
-        <div class="header__logo--left">
-          <img
-            class="header__image"
-            src="./image/icon/logo.png"
-            width="62px"
-            height="62px"
-            alt="logo"
-          />
-          <h2 class="header__label">Taxeria</h2>
-        </div>
-        <div class="header__navigationSelect">
-          <img
-            class="header__selectButton"
-            src="image/icon/navbar.png"
-            onclick="hideSelect()"
-          />
-        </div>
-      </div>
-    </header>
-    <main class="main">
-      <div class="main__navbar--hidden">
-        <a href="#main" class="main__anchor">Главная</a>
-        <a href="#traffic" class="main__anchor">Тарифы</a>
-        <a href="#work" class="main__anchor">Работа</a>
-        <a href="#review" class="main__anchor">Отзывы</a>
-        <a href="#contacts" class="main__anchor">Контакты</a>
-        <a href="./pages/personalOffise.html" id="user-name"> Maks </a>
-      </div>
-      <section class="main__order">
-        <iframe
-          class="main__map"
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d75074.60174604264!2d30.25596462286499!3d55.16065083641594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sby!4v1638192175391!5m2!1sru!2sby"
-          width="600"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
-        <a class="main__anchor" name="main" href="./pages/history.html">История поездок</a>
-        <form class="main__form" action="./pages/userOrder.html">
-          <img
-            class="main__button--disable"
-            src="./image/icon/buttonDisable.png"
-            onclick="hideForm()"
-          />
-          <input
-            class="main__input"
-            type="text"
-            placeholder="Место отправление..."
-          />
-          <input
-            class="main__input"
-            type="text"
-            placeholder="Место прибытия..."
-          />
-          <div class="main__checkbox">
-            <div class="main__econom">
-              <p>Эконом</p>
-              <p>3 Br</p>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css" />
+    <title>ComplaintBook</title>
+</head>
+<body>
+<div class="header">
+    <div class="header__navBar">
+        <div class="header__logo">
+            <div class="item-header__img">
+                <img
+                        src="images/icons/logo.png"
+                        width="40px"
+                        height="40px"
+                        alt="logo"
+                />
             </div>
-            <div class="main__comfort">
-              <p>Комфорт</p>
-              <p>5 Br</p>
+            <div class="item-header__label">
+                <h3>ComplainBook</h3>
             </div>
-            <div class="main__lux">
-              <p>Люкс</p>
-              <p>9 Br</p>
+        </div>
+        <div class="item-header__navigation">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="review.html">Оставить отзыв</a></li>
+                <li><a href="#">О нас</a></li>
+            </ul>
+        </div>
+        <div class="header__authorization">
+            <img
+                    class="item-header__icon"
+                    src="images/icons/login.png"
+                    width="30px"
+                    height="30px"
+                    alt="login"
+            />
+            <div class="item-header__enter">
+                <a href="authorization.html">Войти</a>
             </div>
-          </div>
-          <button class="main__button" type="submit">Оформить заказ</button>
-        </form>
-      </section>
-      <section class="main__admin">
-       <div class="table admin_table">
-        <table class="main-history__table--content">
-          <tr>
-            <th>Номер</th>
-            <th>Дата</th>
-            <th>Водитель</th>
-            <th>Оценка</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>12.10.2010</td>
-            <td>Сергей</td>
-            <td onclick="openModal()">Нет</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>10.11.2015</td>
-            <td>Александр</td>
-            <td onclick="openModal()">4/5</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>11.01.2017</td>
-            <td>Глеб</td>
-            <td  onclick="openModal()">4/5</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>24.02.2018</td>
-            <td>Евгений</td>
-            <td  onclick="openModal()">3/5</td>
-          </tr>
-        </table>
-       </div>
-      </section>
-      <section class="traffic">
-        <div class="traffic-header">
-          <h2><a name="traffic"></a>Тарифы</h2>
         </div>
-        <div class="traffic-content">
-          <div class="traffic-content-city">
-            <h3>По городу</h3>
-            <table>
-              <tr>
-                <td>Тип</td>
-                <td>Бюджет</td>
-                <td>Комфорт</td>
-                <td>Люкс</td>
-              </tr>
-              <tr>
-                <td>Цена за км</td>
-                <td>0.90</td>
-                <td>1.00</td>
-                <td>1.30</td>
-              </tr>
-              <tr>
-                <td>Простой мин</td>
-                <td>0.90</td>
-                <td>1.00</td>
-                <td>1.40</td>
-              </tr>
-              <tr>
-                <td>Посадка</td>
-                <td>1.20</td>
-                <td>2.00</td>
-                <td>2.50</td>
-              </tr>
-            </table>
-          </div>
-          <div class="traffic-content-cityfrom">
-            <h3>За городом</h3>
-            <table>
-              <tr>
-                <td>Тип</td>
-                <td>Бюджет</td>
-                <td>Комфорт</td>
-                <td>Люкс</td>
-              </tr>
-              <tr>
-                <td>Цена за км</td>
-                <td>0.90</td>
-                <td>1.00</td>
-                <td>1.30</td>
-              </tr>
-              <tr>
-                <td>Простой мин</td>
-                <td>0.90</td>
-                <td>1.00</td>
-                <td>1.40</td>
-              </tr>
-              <tr>
-                <td>Посадка</td>
-                <td>1.20</td>
-                <td>2.00</td>
-                <td>2.50</td>
-              </tr>
-            </table>
-          </div>
+    </div>
+</div>
+<div class="banner">
+    <div class="banner__offerConstruction">
+        <div class="item-banner__label">
+            ИЗУЧАЙТЕ ОТЗЫВЫ О КОМПАНИЯХ
         </div>
-      </section>
-      <section class="work">
-        <div class="work-header">
-          <h2><a name="work"></a>Работа</h2>
-        </div>
-        <div class="work-content">
-          <div class="work-content-adventuries">
-            <h2>Наши преимущества</h2>
-            <div>
-              <img src="./image/icon/time.png" />
-              <h3>Гибкий график работы</h3>
+        <div class="item-banner__search">
+            <div class="item-banner__input">
+                <input type="text" placeholder="Название компании">
             </div>
-            <div>
-              <img src="./image/icon/docs.png" />
-              <h3>Работа без контракта</h3>
+            <div class="item-banner__inputIcon">
+                <img
+                        src="images/icons/input.png"
+                        width="30px"
+                        height="30px"
+                        alt="input"
+                />
             </div>
-            <div>
-              <img src="./image/icon/money.png" />
-              <h3>Ежедневная оплата</h3>
-            </div>
-          </div>
-          <div class="work-content-form">
-            <h2>Оставьте ваше заявление</h2>
-            <form>
-              <input class="work-content__input--name" id="driver-name" type="text" placeholder="ФИО..." />
-              <input class="work-content__input--number" id="driver-number" type="number" placeholder="Номер телефона..." />
-              <input class="work-content__input--car" id="driver-car" type="text" placeholder="Марка авто, кузов, цвет..." />
-              <button onclick="driverRegistrate()">Подать заявление</button>
-            </form>
-          </div>
         </div>
-      </section>
-      <section class="review">
-        <div class="review-header">
-          <h2><a name="review"></a>Отзывы</h2>
-        </div>
-        <div class="review-content">
-          <div class="slider">
-            <div class="slider-line">
-              <div class="slider-line-item">
-                <div class="user">
-                  <img src="./image/photo.png" />
-                  <h2>Костя</h2>
-                  <div class="stars">
-                    <img src="./image/icon/star.png" />
-                    <img src="./image/icon/star.png" />
-                    <img src="./image/icon/star.png" />
-                    <img src="./image/icon/star.png" />
-                    <img src="./image/icon/star.png" />
-                  </div>
+        <div class="banner__statistic">
+            <div class="banner__review">
+                <div class="item-banner__reviewNumber">
+                    123000
                 </div>
-                <p>
-                  Отличный сервис, приятные водители, высокая скорость работы.
-                  Снимаю перед вами шляпу. Всем сов...
-                </p>
-              </div>
-              <div class="slider-line-item">
-                <div class="user">
-                  <img src="./image/photo2.png" />
-                  <h2>Саня</h2>
-                  <div class="stars">
-                    <img src="./image/icon/star.png" />
-                    <img src="./image/icon/star.png" />
-                    <img src="./image/icon/star.png" />
-                    <img src="./image/icon/star.png" />
-                    <img src="./image/icon/star.png" />
-                  </div>
+                <div class="item-banner__reviewLabel">
+                    отзывов
                 </div>
-                <p>
-                  Неплохой сервис, но в эпоху существования яндекс такси не вижу
-                  в нем смысла. Не скажу ничего плохого, все на...
-                </p>
-              </div>
-              <div class="slider-line-item">
-                <div class="user">
-                  <img src="./image/photo3.png" />
-                  <h2>Витя</h2>
-                  <div class="stars">
-                    <img src="./image/icon/star.png" />
-                    <img src="./image/icon/star.png" />
-                    <img src="./image/icon/star.png" />
-                    <img src="./image/icon/star.png" />
-                    <img src="./image/icon/starUnactive.png" />
-                  </div>
-                </div>
-                <p>
-                  Как-то у нам с друзьями повезло заехать в незнакомый город, да
-                  еще и на сломанной машине, так вот как р...
-                </p>
-              </div>
-              <div class="slider-line-item">
-                <div class="user">
-                  <img src="./image/photo.png" />
-                  <h2>Вилат</h2>
-                  <div class="stars">
-                    <img src="./image/icon/star.png" />
-                    <img src="./image/icon/star.png" />
-                    <img src="./image/icon/star.png" />
-                    <img src="./image/icon/star.png" />
-                    <img src="./image/icon/star.png" />
-                  </div>
-                </div>
-                <p>
-                  Отличный сервис, приятные водители, высокая скорость работы.
-                  Снимаю перед вами шляпу. Всем сов...
-                </p>
-              </div>
-              <div class="slider-line-item">
-                <div class="user">
-                  <img src="./image/photo2.png" />
-                  <h2>Паша</h2>
-                  <div class="stars">
-                    <img src="./image/icon/star.png" />
-                    <img src="./image/icon/star.png" />
-                    <img src="./image/icon/star.png" />
-                    <img src="./image/icon/star.png" />
-                    <img src="./image/icon/star.png" />
-                  </div>
-                </div>
-                <p>
-                  Отличный сервис, приятные водители, высокая скорость работы.
-                  Снимаю перед вами шляпу. Всем сов...
-                </p>
-              </div>
-              <div class="slider-line-item">
-                <div class="user">
-                  <img src="./image/photo2.png" />
-                  <h2>Паша</h2>
-                  <div class="stars">
-                    <img src="./image/icon/star.png" />
-                    <img src="./image/icon/star.png" />
-                    <img src="./image/icon/star.png" />
-                    <img src="./image/icon/star.png" />
-                    <img src="./image/icon/star.png" />
-                  </div>
-                </div>
-                <p>
-                  Отличный сервис, приятные водители, высокая скорость работы.
-                  Снимаю перед вами шляпу. Всем сов...
-                </p>
-              </div>
             </div>
-          </div>
-          <img
-            class="slider-prev"
-            src="./image/icon/leftArrow.png"
-            width="100px"
-            height="100px"
-          />
-          <img
-            class="slider-next"
-            src="./image/icon/rightArrow.png"
-            width="100px"
-            height="100px"
-          />
-        </div>
-      </section>
-      <section class="contacts">
-        <div class="contacts-header">
-          <h2><a name="contacts"></a>Контакты</h2>
-        </div>
-        <div class="contacts-content">
-          <div class="contacts-content-text-left">
-            <p>Заказ такси - 719</p>
-            <p>Вопросы по сервису: +375 33 432 88 91</p>
-            <p>Вопросы по работе: +375 33 452 44 11</p>
-          </div>
-          <div class="contacts-content-text-right">
-            <p>Общие вопросы - taxirea@mail.ru</p>
-            <p>Тех. поддержка - taxireatex@mail.ru</p>
-            <div class="social">
-              <img src="./image/social/insta.png" />
-              <img src="./image/social/twitter.png" />
-              <img src="./image/social/vk.png" />
-              <img src="./image/social/you.png" />
+            <div class="banner__company">
+                <div class="item-banner__companyCount">
+                    7300
+                </div>
+                <div class="item-banner__companyLabel">
+                    компаний
+                </div>
             </div>
-          </div>
         </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <h2 class="footer__text">Наши партнеры</h2>
-      <div class="footer__partner">
-        <img class="footer__image" src="./image/footer/partner1.png" />
-        <img class="footer__image" src="./image/footer/partner2.png" />
-        <img class="footer__image" src="./image/footer/partner3.png" />
-        <img class="footer__image" src="./image/footer/partner4.png" />
-      </div>
-      <div class="footer__copurate">
-        <img class="footer__image" src="./image/icon/logo.png" />
-        <h4 class="footer__text">Taxirea</h4>
-        <p class="footer__text">© ООО «Такси Лайм» 2021</p>
-      </div>
-    </footer>
-    <script src="./scrips/script.js"></script>
-    <script src="./scrips/slider.js"></script>
-    <script src="./scrips/autorizate.js"></script>
-    <script src="./scrips/pagesChange.js"></script>
-  </body>
+    </div>
+</div>
+<div class="main">
+    <div class="main__popular">
+        <div class="item-main__popularLabel">
+            Популярные компании
+        </div>
+        <div class="main__slider">
+            <div class="main__companies">
+                <div class="item-main__cardBase">
+                    <div class="item-main__logoBase">
+                        <div class="item-main__logo">
+                            <img
+                                    src="images/companies-logo/MTS.png"
+                                    width="75px"
+                                    height="75px"
+                                    alt="MTS"
+                            />
+                        </div>
+                        <div class="item-main__label">
+                            MTS
+                        </div>
+                    </div>
+                    <div class="item-main__rating">
+                        <div class="item-main__star">
+                            <img
+                                    src="images/icons/star.png"
+                                    width="22px"
+                                    height="22px"
+                                    alt="star"
+                            />
+                        </div>
+                        <div class="item-main__star">
+                            <img
+                                    src="images/icons/star.png"
+                                    width="22px"
+                                    height="22px"
+                                    alt="star"
+                            />
+                        </div>
+                        <div class="item-main__star">
+                            <img
+                                    src="images/icons/star.png"
+                                    width="22px"
+                                    height="22px"
+                                    alt="star"
+                            />
+                        </div>
+                        <div class="item-main__negStar">
+                            <img
+                                    src="images/icons/negStar.png"
+                                    width="22px"
+                                    height="22px"
+                                    alt="star"
+                            />
+                        </div>
+                        <div class="item-main__negStar">
+                            <img
+                                    src="images/icons/negStar.png"
+                                    width="22px"
+                                    height="22px"
+                                    alt="star"
+                            />
+                        </div>
+                    </div>
+                    <div class="item-main__reviewCount">
+                        147 отзывов
+                    </div>
+                </div>
+            </div>
+            <div class="main__companies">
+                <div class="item-main__cardBase">
+                    <div class="item-main__logoBase">
+                        <div class="item-main__logo">
+                            <img
+                                    src="images/companies-logo/а1.png"
+                                    width="75px"
+                                    height="75px"
+                                    alt="а1"
+                            />
+                        </div>
+                        <div class="item-main__label">
+                            А1
+                        </div>
+                    </div>
+                    <div class="item-main__rating">
+                        <div class="item-main__star">
+                            <img
+                                    src="images/icons/star.png"
+                                    width="22px"
+                                    height="22px"
+                                    alt="star"
+                            />
+                        </div>
+                        <div class="item-main__star">
+                            <img
+                                    src="images/icons/star.png"
+                                    width="22px"
+                                    height="22px"
+                                    alt="star"
+                            />
+                        </div>
+                        <div class="item-main__star">
+                            <img
+                                    src="images/icons/star.png"
+                                    width="22px"
+                                    height="22px"
+                                    alt="star"
+                            />
+                        </div>
+                        <div class="item-main__negStar">
+                            <img
+                                    src="images/icons/negStar.png"
+                                    width="22px"
+                                    height="22px"
+                                    alt="star"
+                            />
+                        </div>
+                        <div class="item-main__negStar">
+                            <img
+                                    src="images/icons/negStar.png"
+                                    width="22px"
+                                    height="22px"
+                                    alt="star"
+                            />
+                        </div>
+                    </div>
+                    <div class="item-main__reviewCount">
+                        217 отзывов
+                    </div>
+                </div>
+            </div>
+            <div class="main__companies">
+                <div class="item-main__cardBase">
+                    <div class="item-main__logoBase">
+                        <div class="item-main__logo">
+                            <img
+                                    src="images/companies-logo/евроопт.png"
+                                    width="75px"
+                                    height="75px"
+                                    alt="евроопт"
+                            />
+                        </div>
+                        <div class="item-main__label">
+                            ЕВРООПТ
+                        </div>
+                    </div>
+                    <div class="item-main__rating">
+                        <div class="item-main__star">
+                            <img
+                                    src="images/icons/star.png"
+                                    width="22px"
+                                    height="22px"
+                                    alt="star"
+                            />
+                        </div>
+                        <div class="item-main__star">
+                            <img
+                                    src="images/icons/star.png"
+                                    width="22px"
+                                    height="22px"
+                                    alt="star"
+                            />
+                        </div>
+                        <div class="item-main__star">
+                            <img
+                                    src="images/icons/star.png"
+                                    width="22px"
+                                    height="22px"
+                                    alt="star"
+                            />
+                        </div>
+                        <div class="item-main__negStar">
+                            <img
+                                    src="images/icons/negStar.png"
+                                    width="22px"
+                                    height="22px"
+                                    alt="star"
+                            />
+                        </div>
+                        <div class="item-main__negStar">
+                            <img
+                                    src="images/icons/negStar.png"
+                                    width="22px"
+                                    height="22px"
+                                    alt="star"
+                            />
+                        </div>
+                    </div>
+                    <div class="item-main__reviewCount">
+                        534 отзыва
+                    </div>
+                </div>
+            </div>
+            <div class="main__companies">
+                <div class="item-main__cardBase">
+                    <div class="item-main__logoBase">
+                        <div class="item-main__logo">
+                            <img
+                                    src="images/companies-logo/5элемент.png"
+                                    width="75px"
+                                    height="75px"
+                                    alt="MTS"
+                            />
+                        </div>
+                        <div class="item-main__label">
+                            5 ЭЛЕМЕНТ
+                        </div>
+                    </div>
+                    <div class="item-main__rating">
+                        <div class="item-main__star">
+                            <img
+                                    src="images/icons/star.png"
+                                    width="22px"
+                                    height="22px"
+                                    alt="star"
+                            />
+                        </div>
+                        <div class="item-main__star">
+                            <img
+                                    src="images/icons/star.png"
+                                    width="22px"
+                                    height="22px"
+                                    alt="star"
+                            />
+                        </div>
+                        <div class="item-main__star">
+                            <img
+                                    src="images/icons/star.png"
+                                    width="22px"
+                                    height="22px"
+                                    alt="star"
+                            />
+                        </div>
+                        <div class="item-main__negStar">
+                            <img
+                                    src="images/icons/negStar.png"
+                                    width="22px"
+                                    height="22px"
+                                    alt="star"
+                            />
+                        </div>
+                        <div class="item-main__negStar">
+                            <img
+                                    src="images/icons/negStar.png"
+                                    width="22px"
+                                    height="22px"
+                                    alt="star"
+                            />
+                        </div>
+                    </div>
+                    <div class="item-main__reviewCount">
+                        328 отзывов
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main__last">
+        <div class="item-main__lastLabel">
+            Последние отзывы
+        </div>
+        <div class="main__lastSlider">
+            <div class="main__lastCompanies">
+                <div class="item-main__lastCardBase">
+                    <div class="item-main__headerLastCard">
+                        <div class="item-main__logo">
+                            <img
+                                    src="images/companies-logo/MTS.png"
+                                    width="75px"
+                                    height="75px"
+                                    alt="MTS"
+                            />
+                        </div>
+                        <div class="item-main__infoLastCard">
+                            <div class="item-main__label">
+                                MTS
+                            </div>
+                            <div class="item-main__rating">
+                                <div class="item-main__star">
+                                    <img
+                                            src="images/icons/star.png"
+                                            width="22px"
+                                            height="22px"
+                                            alt="telegram"
+                                    />
+                                </div>
+                                <div class="item-main__star">
+                                    <img
+                                            src="images/icons/star.png"
+                                            width="22px"
+                                            height="22px"
+                                            alt="telegram"
+                                    />
+                                </div>
+                                <div class="item-main__star">
+                                    <img
+                                            src="images/icons/star.png"
+                                            width="22px"
+                                            height="22px"
+                                            alt="telegram"
+                                    />
+                                </div>
+                                <div class="item-main__negStar">
+                                    <img
+                                            src="images/icons/negStar.png"
+                                            width="22px"
+                                            height="22px"
+                                            alt="telegram"
+                                    />
+                                </div>
+                                <div class="item-main__negStar">
+                                    <img
+                                            src="images/icons/negStar.png"
+                                            width="22px"
+                                            height="22px"
+                                            alt="telegram"
+                                    />
+                                </div>
+                            </div>
+                            <div class="item-main__reviewCount">
+                                147 отзывов
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-main__description">
+                        Белорусско-российское совместное ООО «Мобильные ТелеСистемы» —
+                        белорусский оператор сотовой связи. Предоставляет услуги связи
+                        стандарта GSM 900/1800, UMTS и 4G, первый по численности абонентов
+                        оператор сотовой связи в Белоруссии
+                    </div>
+                </div>
+                <div class="item-main__lastCardBase">
+                    <div class="item-main__headerLastCard">
+                        <div class="item-main__logo">
+                            <img
+                                    src="images/companies-logo/lim-group.png"
+                                    width="75px"
+                                    height="75px"
+                                    alt="lim-group"
+                            />
+                        </div>
+                        <div class="item-main__infoLastCard">
+                            <div class="item-main__label">
+                                Лим Групп
+                            </div>
+                            <div class="item-main__rating">
+                                <div class="item-main__star">
+                                    <img
+                                            src="images/icons/star.png"
+                                            width="22px"
+                                            height="22px"
+                                            alt="telegram"
+                                    />
+                                </div>
+                                <div class="item-main__star">
+                                    <img
+                                            src="images/icons/star.png"
+                                            width="22px"
+                                            height="22px"
+                                            alt="telegram"
+                                    />
+                                </div>
+                                <div class="item-main__star">
+                                    <img
+                                            src="images/icons/star.png"
+                                            width="22px"
+                                            height="22px"
+                                            alt="telegram"
+                                    />
+                                </div>
+                                <div class="item-main__star">
+                                    <img
+                                            src="images/icons/star.png"
+                                            width="22px"
+                                            height="22px"
+                                            alt="telegram"
+                                    />
+                                </div>
+                                <div class="item-main__negStar">
+                                    <img
+                                            src="images/icons/negStar.png"
+                                            width="22px"
+                                            height="22px"
+                                            alt="telegram"
+                                    />
+                                </div>
+                            </div>
+                            <div class="item-main__reviewCount">
+                                17 отзывов
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-main__description">
+                        ЗАО “Лим Групп” –это быстро развивающаяся логистическая компания,
+                        оказывающая полный комплекс логистических услуг. Предприятие ориентировано
+                        на профессиональное и успешное решение задач, которые диктует рынок
+                        логистических услуг.
+                    </div>
+                </div>
+                <div class="item-main__lastCardBase">
+                    <div class="item-main__headerLastCard">
+                        <div class="item-main__logo">
+                            <img
+                                    src="images/companies-logo/lim-group.png"
+                                    width="75px"
+                                    height="75px"
+                                    alt="lim-group"
+                            />
+                        </div>
+                        <div class="item-main__infoLastCard">
+                            <div class="item-main__label">
+                                Лим Групп
+                            </div>
+                            <div class="item-main__rating">
+                                <div class="item-main__star">
+                                    <img
+                                            src="images/icons/star.png"
+                                            width="22px"
+                                            height="22px"
+                                            alt="telegram"
+                                    />
+                                </div>
+                                <div class="item-main__star">
+                                    <img
+                                            src="images/icons/star.png"
+                                            width="22px"
+                                            height="22px"
+                                            alt="telegram"
+                                    />
+                                </div>
+                                <div class="item-main__star">
+                                    <img
+                                            src="images/icons/star.png"
+                                            width="22px"
+                                            height="22px"
+                                            alt="telegram"
+                                    />
+                                </div>
+                                <div class="item-main__star">
+                                    <img
+                                            src="images/icons/star.png"
+                                            width="22px"
+                                            height="22px"
+                                            alt="telegram"
+                                    />
+                                </div>
+                                <div class="item-main__negStar">
+                                    <img
+                                            src="images/icons/negStar.png"
+                                            width="22px"
+                                            height="22px"
+                                            alt="telegram"
+                                    />
+                                </div>
+                            </div>
+                            <div class="item-main__reviewCount">
+                                17 отзывов
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-main__description">
+                        ЗАО “Лим Групп” –это быстро развивающаяся логистическая компания,
+                        оказывающая полный комплекс логистических услуг. Предприятие ориентировано
+                        на профессиональное и успешное решение задач, которые диктует рынок
+                        логистических услуг.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main__info">
+        <div class="item-main__infoLabel">
+            Необходимость отзывов о компании
+        </div>
+        <div class="item-main__infoDescription">
+            <p>
+                Многие особенности работы в компании можно узнать только из отзывов
+                ее сотрудников. Описание вакансии, а также описание функционала и
+                рабочих условий на собеседовании далеко не всегда являются исчерпывающей
+                информацией, которую так важно проанализировать при принятии решения о
+                работе.
+            </p>
+            <p>
+                Соцпакет, наличие комфортных условий труда, соблюдение норм трудового кодекса,
+                уровень зарплаты – как раз об этом чаще всего и пишут сотрудники компаний
+                в своей обратной связи. Именно поэтому мы и создали наш ресурс: чтобы
+                соискатели обладали всей необходимой информацией о работодателях.
+            </p>
+            <p>
+                Хорошие отзывы сразу же привлекают внимание кандидатов. При этом слишком
+                положительная обратная связь сотрудников может вызвать недоверие и вопрос:
+                «Действительно ли этот отзыв является честным и непредвзятым?».
+            </p>
+            <p>
+                На негативные отзывы соискатели обращают не менее пристальное внимание. При
+                этом важно понимать, что даже в отзыве с негативным содержанием сотрудники
+                указывают положительные стороны своего работодателя. А его минусы могут
+                относиться к конкретному отделу и не иметь ничего общего с будущей позицией
+                и работой соискателя. Но брать их в расчет, конечно же, стоит.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer__menu">
+        <div class="footer__manager">
+            <div class="item-footer__label">
+                Для менеджеров
+            </div>
+            <div class="item-footer__anchor">
+                <a href="#">Возможности платформы</a>
+                <a href="#">Добавить компанию</a>
+                <a href="#">Кабинет менеджера</a>
+            </div>
+        </div>
+        <div class="footer__commenter">
+            <div class="item-footer__label">
+                Для соискателей
+            </div>
+            <div class="item-footer__anchor">
+                <a href="#">Гарантия анонимности</a>
+                <a href="#">Оставить отзыв</a>
+                <a href="#">Компании по категориям</a>
+            </div>
+        </div>
+        <div class="footer__info">
+            <div class="item-footer__label">
+                О ComplainBook
+            </div>
+            <div class="item-footer__anchor">
+                <a href="#">Правила и принципы</a>
+                <a href="#">Пользовательское соглашение</a>
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+        </div>
+        <div class="footer__manager">
+            <div class="item-footer__label">
+                Мы в соц. сетях
+            </div>
+            <div class="item-footer__social">
+                <a href="https://web.telegram.org">
+                    <img
+                            src="images/icons/telegram.png"
+                            width="40px"
+                            height="40px"
+                            alt="telegram"
+                    />
+                </a>
+                <a href="https://www.instagram.com">
+                    <img
+                            src="images/icons/instagram.png"
+                            width="40px"
+                            height="40px"
+                            alt="instagram"
+                    />
+                </a>
+                <a href="https://www.youtube.com">
+                    <img
+                            src="images/icons/youtube.png"
+                            width="40px"
+                            height="40px"
+                            alt="youtube"
+                    />
+                </a>
+                <a href="https://www.whatsapp.com">
+                    <img
+                            src="images/icons/whatsapp.png"
+                            width="40px"
+                            height="40px"
+                            alt="whatsapp"
+                    />
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer__rights">
+        <div class="item-footer__label">
+            © 2021. ComplainBook. Все права защищены.
+        </div>
+        <div class="item-footer__creator">
+            Разработка сайта Yahor Sviarchkou
+        </div>
+    </div>
+</div>
+</body>
 </html>

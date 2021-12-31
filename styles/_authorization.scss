@@ -1,0 +1,82 @@
+.authorization{
+  &__enter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5%;
+    margin-left: 6%;
+  }
+  &__politics{
+    display: flex;
+    align-items: center;
+    margin-top: 1%;
+  }
+
+  &__outer{
+    display: flex;
+    max-width: 430px;
+    justify-content: space-between;
+    margin-top: 1%;
+  }
+}
+
+.item-authorization{
+  &__label{
+    font-size: 35px;
+    margin-bottom: 5%;
+  }
+  &__email{
+    input{
+      border-radius: 10px;
+      width: 300px;
+      height: 40px;
+      padding-left: 20px;
+    }
+    margin-bottom: 2%;
+  }
+  &__pass{
+    input{
+      border-radius: 10px;
+      width: 300px;
+      height: 40px;
+      padding-left: 20px;
+    }
+    margin-bottom: 2%;
+  }
+  &__button{
+    input{
+      border-radius: 10px;
+      width: 150px;
+      height: 40px;
+      background-color: #0bb90b;
+    }
+  }
+  &__checkbox{
+    input{
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &__description{
+    margin-left: 15px;
+  }
+
+  &__losePass{
+    a{
+      font-size: 18px;
+      color: #858585;
+    }
+    a:hover{
+      color: #ffffff;
+    }
+  }
+  &__regist{
+    a{
+      font-size: 18px;
+      color: #858585;
+    }
+    a:hover{
+      color: #ffffff;
+    }
+  }
+}

@@ -1,0 +1,96 @@
+.main{
+  display: flex;
+  flex-direction: column;
+  &__popular{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  &__slider {
+    display: flex;
+    margin-top: 3%;
+    margin-left: 9%;
+    margin-right: 10%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__companies{
+    background-color: #522f47;
+    padding: 25px;
+    border-radius: 10px;
+    width: 200px;
+  }
+
+  &__last{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  &__lastCompanies{
+    display: flex;
+  }
+  &__lastSlider {
+    display: flex;
+    margin-top: 3%;
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+  &__info{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    margin-right: 6%;
+  }
+}
+.item-main{
+  &__popularLabel{
+    font-size: 25px;
+    margin-left: 6%;
+  }
+
+  &__lastLabel{
+    font-size: 25px;
+    margin-top: 3%;
+    margin-left: 6%;
+  }
+  &__infoLabel{
+    font-size: 25px;
+    margin-top: 3%;
+    margin-left: 6%;
+  }
+  &__infoDescription{
+    margin-left: 6%;
+    font-size: 18px;
+    line-height: 2.5;
+  }
+  &__rating{
+    display: flex;
+  }
+
+  &__lastCardBase{
+    background-color: #522F47;
+    padding: 25px;
+    margin: 0 50px 0 50px;
+    border-radius: 10px;
+  }
+  &__headerLastCard{
+    display: flex;
+    align-items: center;
+  }
+
+  &__label{
+    font-size: 25px;
+  }
+
+  &__description{
+    margin-top: 15px;
+    font-size: 18px;
+    max-width: 400px;
+  }
+
+  &__infoLastCard{
+    margin-left: 40px;
+  }
+}
+

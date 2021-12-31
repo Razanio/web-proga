@@ -1,0 +1,32 @@
+@import './fonts';
+
+$fontBold: Montserrat-Bold;
+$fontRegular: Montserrat-Regular;
+$fontMedium: Montserrat-Medium;
+$fontLight: Montserrat-Light;
+
+$fontColor: #fff;
+$whiteColor: #fff;
+$grayColor: #6e6e6e;
+$blackColor: #000;
+
+$bodyBackgroundColor: linear-gradient(180deg, #0C0C24 0%, #251D34 100%);
+$navbarBackgroundColor: #ffffff;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: $bodyBackgroundColor;
+  color: $whiteColor;
+  font-family: $fontRegular;
+}
+
+a{
+  text-decoration: none;
+}
+
+h2{
+  margin: 0;
+  padding: 0;
+}

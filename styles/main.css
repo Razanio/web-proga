@@ -1,0 +1,364 @@
+.header__navBar {
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 100px;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+.header__authorization {
+  display: flex;
+  align-items: center;
+}
+.header__bunner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.item-header__navigation ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+.item-header__navigation ul li {
+  margin: 0 30px;
+  display: inline;
+}
+.item-header__navigation ul li a:hover {
+  color: brown;
+}
+
+.banner {
+  background: url(/images/bg/header-bg.jpg) no-repeat;
+  width: 100%;
+  height: 90vh;
+  position: relative;
+}
+.banner__offerConstruction {
+  position: absolute;
+  top: 30%;
+  left: 6%;
+  max-width: 300px;
+}
+.banner__static {
+  position: relative;
+}
+.banner__review {
+  position: absolute;
+  top: 130%;
+}
+.banner__company {
+  position: absolute;
+  top: 130%;
+  left: 35%;
+}
+
+.item-banner__label {
+  font-size: 25px;
+}
+.item-banner__search {
+  position: relative;
+  margin-top: 15%;
+}
+.item-banner__input input[type=text]::-webkit-input-placeholder {
+  color: #ffffff;
+}
+.item-banner__input input[type=text]::-moz-placeholder {
+  color: #ffffff;
+}
+.item-banner__input input {
+  width: 95%;
+  height: 40px;
+  border: white solid 0;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #B46E6C 3.61%, #482943 19.71%);
+  box-shadow: 0px 5px 7px 1px #522F47;
+  padding-left: 20px;
+  font-size: 15px;
+}
+.item-banner__inputIcon {
+  position: absolute;
+  top: 8px;
+  left: 90%;
+}
+
+@font-face {
+  font-family: Motserrat-Light;
+  src: url("../fonts/Montserrat-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url("../fonts/Montserrat-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, #0C0C24 0%, #251D34 100%);
+  color: #fff;
+  font-family: Montserrat-Regular;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+.main__popular {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.main__slider {
+  display: flex;
+  margin-top: 3%;
+  margin-left: 9%;
+  margin-right: 10%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.main__companies {
+  background-color: #522f47;
+  padding: 25px;
+  border-radius: 10px;
+  width: 200px;
+}
+.main__last {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.main__lastCompanies {
+  display: flex;
+}
+.main__lastSlider {
+  display: flex;
+  margin-top: 3%;
+  margin-left: 6%;
+  margin-right: 6%;
+}
+.main__info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3%;
+  margin-right: 6%;
+}
+
+.item-main__popularLabel {
+  font-size: 25px;
+  margin-left: 6%;
+}
+.item-main__lastLabel {
+  font-size: 25px;
+  margin-top: 3%;
+  margin-left: 6%;
+}
+.item-main__infoLabel {
+  font-size: 25px;
+  margin-top: 3%;
+  margin-left: 6%;
+}
+.item-main__infoDescription {
+  margin-left: 6%;
+  font-size: 18px;
+  line-height: 2.5;
+}
+.item-main__rating {
+  display: flex;
+}
+.item-main__lastCardBase {
+  background-color: #522F47;
+  padding: 25px;
+  margin: 0 50px 0 50px;
+  border-radius: 10px;
+}
+.item-main__headerLastCard {
+  display: flex;
+  align-items: center;
+}
+.item-main__label {
+  font-size: 25px;
+}
+.item-main__description {
+  margin-top: 15px;
+  font-size: 18px;
+  max-width: 400px;
+}
+.item-main__infoLastCard {
+  margin-left: 40px;
+}
+
+.footer {
+  margin-top: 5%;
+  background-color: #090A23;
+  display: flex;
+  flex-direction: column;
+}
+.footer__menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 4%;
+  margin-right: 6%;
+  margin-left: 6%;
+}
+.footer__rights {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 3%;
+  margin-right: 6%;
+  margin-left: 6%;
+  margin-bottom: 3%;
+}
+
+.item-footer__label {
+  font-size: 20px;
+}
+.item-footer__anchor {
+  display: flex;
+  flex-direction: column;
+}
+.item-footer__anchor a {
+  padding: 15px 0 15px 0;
+  color: #8d8d8d;
+}
+.item-footer__anchor a:hover {
+  color: #f3f3f3;
+}
+.item-footer__social img {
+  margin-top: 10px;
+}
+.item-footer__social img:hover {
+  transform: scale(1.2);
+}
+
+.authorization__enter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5%;
+  margin-left: 6%;
+}
+.authorization__politics {
+  display: flex;
+  align-items: center;
+  margin-top: 1%;
+}
+.authorization__outer {
+  display: flex;
+  max-width: 430px;
+  justify-content: space-between;
+  margin-top: 1%;
+}
+
+.item-authorization__label {
+  font-size: 35px;
+  margin-bottom: 5%;
+}
+.item-authorization__email {
+  margin-bottom: 2%;
+}
+.item-authorization__email input {
+  border-radius: 10px;
+  width: 300px;
+  height: 40px;
+  padding-left: 20px;
+}
+.item-authorization__pass {
+  margin-bottom: 2%;
+}
+.item-authorization__pass input {
+  border-radius: 10px;
+  width: 300px;
+  height: 40px;
+  padding-left: 20px;
+}
+.item-authorization__button input {
+  border-radius: 10px;
+  width: 150px;
+  height: 40px;
+  background-color: #0bb90b;
+}
+.item-authorization__checkbox input {
+  width: 20px;
+  height: 20px;
+}
+.item-authorization__description {
+  margin-left: 15px;
+}
+.item-authorization__losePass a {
+  font-size: 18px;
+  color: #858585;
+}
+.item-authorization__losePass a:hover {
+  color: #ffffff;
+}
+.item-authorization__regist a {
+  font-size: 18px;
+  color: #858585;
+}
+.item-authorization__regist a:hover {
+  color: #ffffff;
+}
+
+.review {
+  display: flex;
+  justify-content: center;
+}
+.review__block {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+}
+.review__choose {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5%;
+}
+
+.item-review__label {
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+.item-review__chooseLabel {
+  font-size: 18px;
+}
+.item-review__inputCompany input {
+  width: 300px;
+  height: 40px;
+  margin-top: 10px;
+}
+
+/*# sourceMappingURL=main.css.map */
