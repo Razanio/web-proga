@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css" />
-    <title>Authorization</title>
+    <title>Add</title>
 </head>
 <body>
 <div class="header">
@@ -17,7 +17,7 @@
                     <li><a href="index.html">Главная</a></li>
                     <li><a href="review.html">Оставить отзыв</a></li>
                     <li><a href="list.html">Просмотр отзывов</a></li>
-                    <li><a href="authorization.html">Войти</a></li>
+                    <li><a href="index.html">Выйти</a></li>
                 </ul>
             </div>
         </div>
@@ -50,43 +50,63 @@
                     alt="login"
             />
             <div class="item-header__enter">
-                <a href="authorization.html">Войти</a>
+                <a href="index.html">Выйти</a>
             </div>
         </div>
     </div>
 </div>
-<div class="authorization">
-        <div class="authorization__enter">
-            <div class="item-authorization__label">
-                Вход в личный кабинет
+
+<div class="review">
+    <div class="review__block">
+        <div class="item-review__label">
+            Добавьте компанию
+        </div>
+        <div class="review__choose">
+            <div class="item-review__inputLabel">
+                Название компании
             </div>
-            <div class="item-authorization__email">
-                <input type="text" placeholder="Ваш email">
+            <div class="item-review__inputCompany">
+                <input type="text" placeholder="Введите название компании">
             </div>
-            <div class="item-authorization__pass">
-                <input type="text" placeholder="Ваш пароль">
-            </div>
-            <div class="authorization__politics">
-                <div class="item-authorization__checkbox">
-                    <input type="checkbox">
+        </div>
+        <div class="review__counterAndCity">
+            <div class="review__counter">
+                <div class="item-review__inputLabel">
+                    Кол-во сотрудников
                 </div>
-                <div class="item-authorization__description">
-                    Я согласен с политикой конфиденциальности
+                <div class="item-review__miniInput">
+                    <input type="number" min="0" placeholder="0">
                 </div>
             </div>
-            <div class="item-authorization__button">
-                <input type="button" onclick="location.href = './user.html';" value="Войти">
-            </div>
-            <div class="authorization__outer">
-                <div class="item-authorization__losePass">
-                    <a href="#">Не помню пароль</a>
+            <div class="review__city">
+                <div class="item-review__inputLabel">
+                    Город
                 </div>
-                <div class="item-authorization__regist">
-                    <a href="registration.html">Регистрация</a>
+                <div class="item-review__miniInput">
+                    <input type="text" placeholder="Витебск">
                 </div>
             </div>
         </div>
+        <div class="review__advantages">
+            <div class="item-review__inputLabel">
+                Расскажите о компании
+            </div>
+            <div class="item-review__commentInput">
+                <textarea placeholder="Важная информация:"></textarea>
+            </div>
+        </div>
+        <div class="review__logo">
+            <div class="item-review__inputLabel">
+                Добавьте логотип вашей компании
+            </div>
+            <input type="file" class="item-review__addLogo" value="Добавить логотип">
+        </div>
+        <div class="item-review__button">
+            <input type="button" onclick="location.href = './index.html';" value="Добавить">
+        </div>
+    </div>
 </div>
+
 <div class="footer">
     <div class="footer__menu">
         <div class="footer__block">
@@ -168,6 +188,7 @@
         </div>
     </div>
 </div>
+
 <script src="./scripts/script.js"></script>
 </body>
 </html>

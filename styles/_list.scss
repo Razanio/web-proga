@@ -1,0 +1,126 @@
+.preview{
+  &__introImage{
+    margin: 3% 0 3% 15%;
+    display: flex;
+    flex-direction: row;
+  }
+  &__company{
+    background-color: white;
+    color: black;
+    padding: 50px 6% 50px 6%;
+  }
+  &__description{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 900px) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 6%;
+    }
+  }
+  &__companyInfo{
+    display: flex;
+    flex-direction: row;
+    margin-right: 10%;
+    width: 50%;
+    @media (max-width: 900px) {
+      margin-right: 0;
+    }
+  }
+  &__title{
+    margin-left: 5%;
+  }
+  &__rate{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__stars{
+    display: flex;
+    flex-direction: column;
+  }
+  &__companyBottom{
+    margin-top: 15px;
+    background-color: white;
+    padding: 20px 6% 20px 6%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    @media (max-width: 600px) {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+  &__counters{
+    display: flex;
+    flex-direction: row;
+    @media (max-width: 600px) {
+      margin-left: 6%;
+    }
+  }
+  &__questions{
+    margin-left: 15%;
+  }
+  &__buttons{
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 600px) {
+      margin-top: 10px;
+      margin-left: 6%;
+    }
+  }
+}
+.item-preview{
+  &__firstImage{
+    padding-top: 30px;
+  }
+  &__name{
+    font-size: 30px;
+  }
+  &__info{
+    margin-top: 3%;
+    font-size: 20px;
+    color: #585858;
+    @media (max-width: 900px) {
+      font-size: 15px;
+    }
+  }
+  &__label{
+    text-align: center;
+    font-size: 18px;
+  }
+  &__stars{
+    margin: 2% 0;
+  }
+  &__recLine{
+    margin: 15% 0;
+    background-color: #2d2744;
+    height: 20px;
+    border: 0;
+    border-radius: 10px;
+  }
+  &__stat{
+    background-color: rgb(246, 86, 0);
+    height: 20px;
+    width: 73%;
+    border: 0;
+    border-radius: 10px;
+  }
+  &__button{
+    height: 30px;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    &.first{
+      margin-right: 10px;
+      background-color: #76406E;
+    }
+    &.second{
+      margin-left: 10px;
+      background-color: #291B7D;
+    }
+  }
+}

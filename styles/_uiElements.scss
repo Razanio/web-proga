@@ -22,6 +22,32 @@ body {
   font-family: $fontRegular;
 }
 
+input{
+  padding-left: 15px;
+  padding-right: 15px;
+  font-family: $fontMedium;
+}
+input:hover{
+  transform: scale(1.05);
+}
+
+textarea{
+  font-family: $fontMedium;
+  font-size: 16px;
+  padding: 10px 0 10px 15px;
+}
+textarea:hover{
+  transform: scale(1.02);
+}
+
+select{
+  color: $grayColor;
+  font-family: $fontMedium;
+  & option{
+    font-size: 13px;
+  }
+}
+
 a{
   text-decoration: none;
 }

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css" />
-    <title>Authorization</title>
+    <title>User</title>
 </head>
 <body>
 <div class="header">
@@ -17,7 +17,7 @@
                     <li><a href="index.html">Главная</a></li>
                     <li><a href="review.html">Оставить отзыв</a></li>
                     <li><a href="list.html">Просмотр отзывов</a></li>
-                    <li><a href="authorization.html">Войти</a></li>
+                    <li><a href="index.html">Выйти</a></li>
                 </ul>
             </div>
         </div>
@@ -50,42 +50,58 @@
                     alt="login"
             />
             <div class="item-header__enter">
-                <a href="authorization.html">Войти</a>
+                <a href="index.html">Выйти</a>
             </div>
         </div>
     </div>
 </div>
-<div class="authorization">
-        <div class="authorization__enter">
-            <div class="item-authorization__label">
-                Вход в личный кабинет
+<div class="profile">
+    <div class="profile__base">
+        <div class="item-profile__label">
+            Данные профиля
+        </div>
+        <div class="profile__general">
+            <div class="item-profile__avaFrame">
+                <img
+                        class="item-profile__ava"
+                        src="images/users/дед%20митяй.jpg"
+                />
             </div>
-            <div class="item-authorization__email">
-                <input type="text" placeholder="Ваш email">
-            </div>
-            <div class="item-authorization__pass">
-                <input type="text" placeholder="Ваш пароль">
-            </div>
-            <div class="authorization__politics">
-                <div class="item-authorization__checkbox">
-                    <input type="checkbox">
+            <div class="profile__data">
+                <div class="item-profile__name">
+                    Дед Митяй
                 </div>
-                <div class="item-authorization__description">
-                    Я согласен с политикой конфиденциальности
+                <div class="item-profile__status">
+                    менеджер
                 </div>
-            </div>
-            <div class="item-authorization__button">
-                <input type="button" onclick="location.href = './user.html';" value="Войти">
-            </div>
-            <div class="authorization__outer">
-                <div class="item-authorization__losePass">
-                    <a href="#">Не помню пароль</a>
-                </div>
-                <div class="item-authorization__regist">
-                    <a href="registration.html">Регистрация</a>
+                <div class="item-profile__work">
+                    компания: WorkSystems
                 </div>
             </div>
         </div>
+        <div class="profile__connect">
+            <div class="item-profile__label">
+                Номер телефона
+            </div>
+            <div class="item-profile__address">
+                +375331234567
+            </div>
+        </div>
+        <div class="profile__connect">
+            <div class="item-profile__label">
+                Email
+            </div>
+            <div class="item-profile__address">
+                Ivanvan@gmail.com
+            </div>
+        </div>
+        <input
+                class="item-profile__button"
+                type="button"
+                onclick="location.href = './add-company.html';"
+                value="Добавить компанию"
+        >
+    </div>
 </div>
 <div class="footer">
     <div class="footer__menu">

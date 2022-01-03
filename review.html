@@ -10,6 +10,17 @@
 <body>
 <div class="header">
     <div class="header__navBar">
+        <div class="header__sidebar-disable">
+            <div class="item-header__toggle" id="toggle"></div>
+            <div class="item-header__sidebar" id="sidebar">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="review.html">Оставить отзыв</a></li>
+                    <li><a href="list.html">Просмотр отзывов</a></li>
+                    <li><a href="authorization.html">Войти</a></li>
+                </ul>
+            </div>
+        </div>
         <div class="header__logo">
             <div class="item-header__img">
                 <img
@@ -27,7 +38,7 @@
             <ul>
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="review.html">Оставить отзыв</a></li>
-                <li><a href="#">О нас</a></li>
+                <li><a href="list.html">Просмотр отзывов</a></li>
             </ul>
         </div>
         <div class="header__authorization">
@@ -51,67 +62,77 @@
             Напишите отзыв
         </div>
         <div class="review__choose">
-            <div class="item-review__chooseLabel">
+            <div class="item-review__inputLabel">
                 Название компании
             </div>
             <div class="item-review__inputCompany">
-                <input type="text" placeholder="Введите компанию">
+                <input type="text" placeholder="Введите название компании">
             </div>
         </div>
-        <div class="review__counter">
-            <div class="item-review__counterLabel">
-                Кол-во посещений
+        <div class="review__counterAndCity">
+            <div class="review__counter">
+                <div class="item-review__inputLabel">
+                    Посещения
+                </div>
+                <div class="item-review__miniInput">
+                    <input type="text" placeholder="Часто">
+                </div>
             </div>
-            <div class="item-review__inputCounter">
-                <input type="number" placeholder="15">
-            </div>
-        </div>
-        <div class="review__city">
-            <div class="item-review__cityLabel">
-                Город
-            </div>
-            <div class="item-review__inputCity">
-                <input type="text" placeholder="Витебск">
+            <div class="review__city">
+                <div class="item-review__inputLabel">
+                    Город
+                </div>
+                <div class="item-review__miniInput">
+                    <input type="text" placeholder="Витебск">
+                </div>
             </div>
         </div>
         <div class="review__advantages">
-            <div class="item--review__advantagesLabel">
+            <div class="item-review__inputLabel">
                 Расскажите о плюсах компании
             </div>
-            <div class="item-review__advantagesInput">
-                <input type="text" placeholder="Плюсы:">
+            <div class="item-review__commentInput">
+                <textarea placeholder="Плюсы:"></textarea>
             </div>
         </div>
         <div class="review__disadvantages">
-            <div class="item--review__disadvantagesLabel">
+            <div class="item-review__inputLabel">
                 Расскажите о минусах компании
             </div>
-            <div class="item-review__disadvantagesInput">
-                <input type="text" placeholder="Минусы:">
+            <div class="item-review__commentInput">
+                <textarea placeholder="Минусы:"></textarea>
             </div>
         </div>
         <div class="review__recommended">
-            <div class="item-review__recommendedLabel">
+            <div class="item-review__inputLabel">
                 Вы бы порекомендовали компанию своему другу?
             </div>
-            <div class="review__grade">
-                <div class="item-review__like">
-
-                </div>
-                <div class="item-review__dislike">
-
-                </div>
+            <div class="review__likeBlock">
+                <img
+                        class="item-review__like"
+                        src="images/icons/like-nonactive.png"
+                        width="25px"
+                        height="25px"
+                        alt="logo"
+                />
+                <img
+                        class="item-review__dislike"
+                        src="images/icons/dislike-nonactive.png"
+                        width="25px"
+                        height="25px"
+                        alt="logo"
+                />
             </div>
         </div>
         <div class="item-review__button">
-            <input type="button" value="Отправить">
+            <input type="button" onclick="location.href = './authorization.html';" value="Отправить">
         </div>
     </div>
 </div>
 
 <div class="footer">
     <div class="footer__menu">
-        <div class="footer__manager">
+        <div class="footer__block">
             <div class="item-footer__label">
                 Для менеджеров
             </div>
@@ -121,7 +142,7 @@
                 <a href="#">Кабинет менеджера</a>
             </div>
         </div>
-        <div class="footer__commenter">
+        <div class="footer__block">
             <div class="item-footer__label">
                 Для соискателей
             </div>
@@ -131,7 +152,7 @@
                 <a href="#">Компании по категориям</a>
             </div>
         </div>
-        <div class="footer__info">
+        <div class="footer__block">
             <div class="item-footer__label">
                 О ComplainBook
             </div>
@@ -141,7 +162,7 @@
                 <a href="#">Политика конфиденциальности</a>
             </div>
         </div>
-        <div class="footer__manager">
+        <div class="footer__block">
             <div class="item-footer__label">
                 Мы в соц. сетях
             </div>
@@ -183,12 +204,14 @@
     </div>
     <div class="footer__rights">
         <div class="item-footer__label">
-            © 2021. ComplainBook. Все права защищены.
+            © 2022. ComplainBook. Все права защищены.
         </div>
-        <div class="item-footer__creator">
+        <div class="item-footer__label">
             Разработка сайта Yahor Sviarchkou
         </div>
     </div>
 </div>
+
+<script src="./scripts/script.js"></script>
 </body>
 </html>

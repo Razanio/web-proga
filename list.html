@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css" />
+    <title>Title</title>
+</head>
+<body>
+<div class="header">
+    <div class="header__navBar">
+        <div class="header__sidebar-disable">
+            <div class="item-header__toggle" id="toggle"></div>
+            <div class="item-header__sidebar" id="sidebar">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="review.html">Оставить отзыв</a></li>
+                    <li><a href="list.html">Просмотр отзывов</a></li>
+                    <li><a href="authorization.html">Войти</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header__logo">
+            <div class="item-header__img">
+                <img
+                        src="images/icons/logo.png"
+                        width="40px"
+                        height="40px"
+                        alt="logo"
+                />
+            </div>
+            <div class="item-header__label">
+                <h3>ComplainBook</h3>
+            </div>
+        </div>
+        <div class="item-header__navigation">
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="review.html">Оставить отзыв</a></li>
+                <li><a href="list.html">Просмотр отзывов</a></li>
+            </ul>
+        </div>
+        <div class="header__authorization">
+            <img
+                    class="item-header__icon"
+                    src="images/icons/login.png"
+                    width="30px"
+                    height="30px"
+                    alt="login"
+            />
+            <div class="item-header__enter">
+                <a href="authorization.html">Войти</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="preview">
+    <div class="preview__introImage">
+        <img
+                class="item-preview__firstImage"
+                src="images/icons/people.png"
+                width="130px"
+                height="130px"
+        />
+        <img
+                class="item-preview__secondImage"
+                src="images/icons/comment.png"
+                width="121px"
+                height="121px"
+        />
+    </div>
+    <div class="preview__company">
+        <div class="preview__description">
+            <div class="preview__companyInfo">
+                <img
+                        class="item-preview__logo"
+                        src="images/companies-logo/tanuky.png"
+                        width="134px"
+                        height="134px"
+                />
+                <div class="preview__title">
+                    <div class="item-preview__name">
+                        Тануки, японский ресторан
+                    </div>
+                    <div class="item-preview__info">
+                        Менеджер пока не активен на ComplainBook
+                    </div>
+                </div>
+            </div>
+            <div class="preview__rate">
+                <div class="preview__stars">
+                    <div class="item-preview__label">
+                        4.0
+                    </div>
+                    <img
+                            class="item-preview__stars"
+                            src="images/icons/stars.png"
+                            width="208px"
+                            height="50px"
+                    />
+                    <div class="item-preview__label">
+                        хорошо
+                    </div>
+                </div>
+                <div class="preview__recommendation">
+                    <div class="item-preview__label">
+                        73%
+                    </div>
+                    <div class="item-preview__recLine">
+                        <div class="item-preview__stat"></div>
+                    </div>
+                    <div class="item-preview__label">
+                        рекомендуют
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="preview__companyBottom">
+        <div class="preview__counters">
+            <div class="preview__reviews">
+                <div class="item-preview__label">
+                    47
+                </div>
+                <div class="item-preview__label">
+                    Отзывов
+                </div>
+            </div>
+            <div class="preview__questions">
+                <div class="item-preview__label">
+                    9
+                </div>
+                <div class="item-preview__label">
+                    Ответов
+                </div>
+            </div>
+        </div>
+        <div class="preview__buttons">
+            <button class="item-preview__button first">
+                Оставить отзыв
+            </button>
+            <button class="item-preview__button second">
+                Управлять страницей
+            </button>
+        </div>
+    </div>
+</div>
+<div class="catalog">
+    <div class="catalog__left">
+        <div class="catalog__sort">
+            <input type="text" class="item-catalog__city" placeholder="Город">
+            <select class="item-catalog__category">
+                <option>Категории</option>
+                <option value="Еда">Еда</option>
+                <option value="Автомобили">Автомобили</option>
+                <option value="Недвижимоть">Недвижимость</option>
+                <option value="Бытовая техника">Бытовая техника</option>
+                <option value="Спорт">Спорт</option>
+            </select>
+            <div class="catalog__grade">
+                <div class="item-catalog__mainLabel">
+                    Оценка
+                </div>
+                <div class="catalog__gradeLevels">
+                    <div class="catalog__gradeLine">
+                        <div class="catalog__gradeLine left">
+                            <input type="checkbox" class="item-catalog__checkbox">
+                            <div class="item-catalog__levelLabel">
+                                Очень хорошо
+                            </div>
+                        </div>
+                        <div class="catalog__gradeLine right">
+                            <div class="item-catalog__starCount">
+                                4-5
+                            </div>
+                            <img
+                                    class="item-catalog__star"
+                                    src="images/icons/star.png"
+                                    width="22px"
+                                    height="22px"
+                            />
+                        </div>
+                    </div>
+                    <div class="catalog__gradeLine">
+                        <div class="catalog__gradeLine left">
+                            <input type="checkbox" class="item-catalog__checkbox">
+                            <div class="item-catalog__levelLabel">
+                                Хорошо
+                            </div>
+                        </div>
+                        <div class="catalog__gradeLine right">
+                            <div class="item-catalog__starCount">
+                                3-4
+                            </div>
+                            <img
+                                    class="item-catalog__star"
+                                    src="images/icons/star.png"
+                                    width="22px"
+                                    height="22px"
+                            />
+                        </div>
+                    </div>
+                    <div class="catalog__gradeLine">
+                        <div class="catalog__gradeLine left">
+                            <input type="checkbox" class="item-catalog__checkbox">
+                            <div class="item-catalog__levelLabel">
+                                Удовлетворительно
+                            </div>
+                        </div>
+                        <div class="catalog__gradeLine right">
+                            <div class="item-catalog__starCount">
+                                2-3
+                            </div>
+                            <img
+                                    class="item-catalog__star"
+                                    src="images/icons/star.png"
+                                    width="22px"
+                                    height="22px"
+                            />
+                        </div>
+                    </div>
+                    <div class="catalog__gradeLine">
+                        <div class="catalog__gradeLine left">
+                            <input type="checkbox" class="item-catalog__checkbox">
+                            <div class="item-catalog__levelLabel">
+                                Неудовлетворительно
+                            </div>
+                        </div>
+                        <div class="catalog__gradeLine right">
+                            <div class="item-catalog__starCount">
+                                1-2
+                            </div>
+                            <img
+                                    class="item-catalog__star"
+                                    src="images/icons/star.png"
+                                    width="22px"
+                                    height="22px"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="catalog__popular">
+            <div class="item-catalog__label">
+                Популярные компании
+            </div>
+            <div class="catalog__top">
+                <div class="catalog__company">
+                    <img
+                            class="item-catalog__logo"
+                            src="images/companies-logo/росинтер.png"
+                            width="73px"
+                            height="73px"
+                    />
+                    <div class="item-catalog__info">
+                        <div class="item-catalog__infoLabel">
+                            Росинтер Ресторантс Холдинг
+                        </div>
+                        <div class="item-catalog__rate">
+                            <img
+                                    class="item-catalog__star"
+                                    src="images/icons/star.png"
+                                    width="22px"
+                                    height="22px"
+                            />
+                            <div class="item-catalog__starCount">
+                                4.5
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog__company">
+                    <img
+                            class="item-catalog__logo"
+                            src="images/companies-logo/стс.png"
+                            width="73px"
+                            height="73px"
+                    />
+                    <div class="item-catalog__info">
+                        <div class="item-catalog__infoLabel">
+                            СТС Групп
+                        </div>
+                        <div class="item-catalog__rate">
+                            <img
+                                    class="item-catalog__star"
+                                    src="images/icons/star.png"
+                                    width="22px"
+                                    height="22px"
+                            />
+                            <div class="item-catalog__starCount">
+                                3.7
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog__company">
+                    <img
+                            class="item-catalog__logo"
+                            src="images/companies-logo/кантата.png"
+                            width="73px"
+                            height="73px"
+                    />
+                    <div class="item-catalog__info">
+                        <div class="item-catalog__infoLabel">
+                            Кофейная Кантата
+                        </div>
+                        <div class="item-catalog__rate">
+                            <img
+                                    class="item-catalog__star"
+                                    src="images/icons/star.png"
+                                    width="22px"
+                                    height="22px"
+                            />
+                            <div class="item-catalog__starCount">
+                                4.2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="catalog__right">
+        <div class="catalog__form">
+            <div class="item-catalog__userName">
+                Александр
+            </div>
+            <div class="catalog__userGrade">
+                <div class="item-catalog__starCount">
+                    4.0
+                </div>
+                <img
+                        class="item-catalog__star"
+                        src="images/icons/stars.png"
+                        width="130px"
+                        height="32px"
+                />
+            </div>
+            <div class="item-catalog__date">
+                декабрь 2021
+            </div>
+            <div class="catalog__text">
+                <div class="item-catalog__textLabel">
+                    Плюсы
+                </div>
+                <div class="item-catalog__text">
+                    Очень нравится командный дух и поддержка
+                    от руководителей. Они всегда были рады делиться
+                    опытом и дать совет. Менеджеры могут
+                    питаться ресторанной едой. Приятные гости.
+                    На самом деле только положительные эмоции
+                </div>
+            </div>
+            <div class="catalog__text">
+                <div class="item-catalog__textLabel">
+                    Минусы
+                </div>
+                <div class="item-catalog__text">
+                    Сервис Отношение руководства к подчинённым
+                    Улучшить мотивацию для сотрудников Добавить
+                    организованность Улучшить организацию питания,
+                    отдыха
+                </div>
+            </div>
+            <div class="catalog__rate">
+                <div class="item-catalog__textLabel">
+                    Оцените отзыв
+                </div>
+                <div class="catalog__likes">
+                    <img
+                            class="item-catalog__like"
+                            src="images/icons/like-nonactive.png"
+                            width="22px"
+                            height="22px"
+                    />
+                    <img
+                            class="item-catalog__like"
+                            src="images/icons/dislike-nonactive.png"
+                            width="22px"
+                            height="22px"
+                    />
+                    <div class="item-catalog__count">
+                        37
+                    </div>
+                </div>
+            </div>
+            <div class="item-catalog__connect">
+                Менеджер компании?
+                <a class="item-catalog__link" href="authorization.html">
+                    Ответить на отзыв
+                </a>
+            </div>
+        </div>
+        <div class="catalog__form">
+            <div class="item-catalog__userName">
+                Мария
+            </div>
+            <div class="catalog__userGrade">
+                <div class="item-catalog__starCount">
+                    4.0
+                </div>
+                <img
+                        class="item-catalog__star"
+                        src="images/icons/stars.png"
+                        width="130px"
+                        height="32px"
+                />
+            </div>
+            <div class="item-catalog__date">
+                январь 2022
+            </div>
+            <div class="catalog__text">
+                <div class="item-catalog__textLabel">
+                    Плюсы
+                </div>
+                <div class="item-catalog__text">
+                    Очень нравится командный дух и поддержка
+                    от руководителей. Они всегда были рады делиться
+                    опытом и дать совет. Менеджеры могут
+                    питаться ресторанной едой. Приятные гости.
+                    На самом деле только положительные эмоции
+                </div>
+            </div>
+            <div class="catalog__text">
+                <div class="item-catalog__textLabel">
+                    Минусы
+                </div>
+                <div class="item-catalog__text">
+                    Сервис Отношение руководства к подчинённым
+                    Улучшить мотивацию для сотрудников Добавить
+                    организованность Улучшить организацию питания,
+                    отдыха
+                </div>
+            </div>
+            <div class="catalog__rate">
+                <div class="item-catalog__textLabel">
+                    Оцените отзыв
+                </div>
+                <div class="catalog__likes">
+                    <img
+                            class="item-catalog__like"
+                            src="images/icons/like-nonactive.png"
+                            width="22px"
+                            height="22px"
+                    />
+                    <img
+                            class="item-catalog__like"
+                            src="images/icons/dislike-nonactive.png"
+                            width="22px"
+                            height="22px"
+                    />
+                    <div class="item-catalog__count">
+                        12
+                    </div>
+                </div>
+            </div>
+            <div class="catalog__answer">
+                <div class="item-catalog__userName">
+                    Василий - менеджер
+                </div>
+                <div class="item-catalog__date">
+                    январь 2022
+                </div>
+                <div class="catalog__text">
+                    <div class="item-catalog__textLabel">
+                        Ответ
+                    </div>
+                    <div class="item-catalog__text">
+                        «Здравствуйте! Спасибо за отзыв. Нам приятно, что
+                        вы отметили чистоту в нашем салоне! Мы проводим
+                        регулярную уборку не только в кабинетах процедур,
+                        но и за их пределами. И, как вы могли заметить, мастера
+                        перед услугой тщательно моют руки, используют каждый
+                        раз новый, не переплавленный воск для депиляции. И все
+                        многоразовые инструменты стерилизуют для вашей
+                        безопасности. Если хотите так же гигиенично и в комфорте
+                        сделать депиляцию – вы знаете, где нас найти».
+                    </div>
+                </div>
+                <div class="catalog__rate">
+                    <div class="item-catalog__textLabel">
+                        Оцените отзыв
+                    </div>
+                    <div class="catalog__likes">
+                        <img
+                                class="item-catalog__like"
+                                src="images/icons/like-nonactive.png"
+                                width="22px"
+                                height="22px"
+                        />
+                        <img
+                                class="item-catalog__like"
+                                src="images/icons/dislike-nonactive.png"
+                                width="22px"
+                                height="22px"
+                        />
+                        <div class="item-catalog__count">
+                            5
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-catalog__connect">
+                Менеджер компании?
+                <a class="item-catalog__link" href="authorization.html">
+                    Ответить на отзыв
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="footer__menu">
+        <div class="footer__block">
+            <div class="item-footer__label">
+                Для менеджеров
+            </div>
+            <div class="item-footer__anchor">
+                <a href="#">Возможности платформы</a>
+                <a href="#">Добавить компанию</a>
+                <a href="#">Кабинет менеджера</a>
+            </div>
+        </div>
+        <div class="footer__block">
+            <div class="item-footer__label">
+                Для соискателей
+            </div>
+            <div class="item-footer__anchor">
+                <a href="#">Гарантия анонимности</a>
+                <a href="#">Оставить отзыв</a>
+                <a href="#">Компании по категориям</a>
+            </div>
+        </div>
+        <div class="footer__block">
+            <div class="item-footer__label">
+                О ComplainBook
+            </div>
+            <div class="item-footer__anchor">
+                <a href="#">Правила и принципы</a>
+                <a href="#">Пользовательское соглашение</a>
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+        </div>
+        <div class="footer__block">
+            <div class="item-footer__label">
+                Мы в соц. сетях
+            </div>
+            <div class="item-footer__social">
+                <a href="https://web.telegram.org">
+                    <img
+                            src="images/icons/telegram.png"
+                            width="40px"
+                            height="40px"
+                            alt="telegram"
+                    />
+                </a>
+                <a href="https://www.instagram.com">
+                    <img
+                            src="images/icons/instagram.png"
+                            width="40px"
+                            height="40px"
+                            alt="instagram"
+                    />
+                </a>
+                <a href="https://www.youtube.com">
+                    <img
+                            src="images/icons/youtube.png"
+                            width="40px"
+                            height="40px"
+                            alt="youtube"
+                    />
+                </a>
+                <a href="https://www.whatsapp.com">
+                    <img
+                            src="images/icons/whatsapp.png"
+                            width="40px"
+                            height="40px"
+                            alt="whatsapp"
+                    />
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer__rights">
+        <div class="item-footer__label">
+            © 2022. ComplainBook. Все права защищены.
+        </div>
+        <div class="item-footer__label">
+            Разработка сайта Yahor Sviarchkou
+        </div>
+    </div>
+</div>
+<script src="./scripts/script.js"></script>
+</body>
+</html>

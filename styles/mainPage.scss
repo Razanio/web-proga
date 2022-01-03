@@ -11,13 +11,14 @@
     margin-top: 3%;
     margin-left: 9%;
     margin-right: 10%;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
   }
 
   &__companies{
     background-color: #522f47;
     padding: 25px;
+    margin: 20px;
     border-radius: 10px;
     width: 200px;
   }
@@ -29,12 +30,19 @@
   }
   &__lastCompanies{
     display: flex;
+    flex-wrap: wrap;
+    padding: 25px;
+    background-color: #522F47;
+    margin: 20px;
+    border-radius: 10px;
   }
   &__lastSlider {
     display: flex;
     margin-top: 3%;
     margin-left: 6%;
     margin-right: 6%;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   &__info{
     display: flex;
@@ -69,10 +77,10 @@
   }
 
   &__lastCardBase{
-    background-color: #522F47;
+   /* background-color: #522F47;
     padding: 25px;
-    margin: 0 50px 0 50px;
-    border-radius: 10px;
+    margin: 20px 50px 20px 50px;
+    border-radius: 10px;*/
   }
   &__headerLastCard{
     display: flex;

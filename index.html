@@ -10,6 +10,17 @@
 <body>
 <div class="header">
     <div class="header__navBar">
+        <div class="header__sidebar-disable">
+            <div class="item-header__toggle" id="toggle"></div>
+            <div class="item-header__sidebar" id="sidebar">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="review.html">Оставить отзыв</a></li>
+                    <li><a href="list.html">Просмотр отзывов</a></li>
+                    <li><a href="authorization.html">Войти</a></li>
+                </ul>
+            </div>
+        </div>
         <div class="header__logo">
             <div class="item-header__img">
                 <img
@@ -27,7 +38,7 @@
             <ul>
                 <li><a href="index.html">Главная</a></li>
                 <li><a href="review.html">Оставить отзыв</a></li>
-                <li><a href="#">О нас</a></li>
+                <li><a href="list.html">Просмотр отзывов</a></li>
             </ul>
         </div>
         <div class="header__authorization">
@@ -412,6 +423,8 @@
                         оператор сотовой связи в Белоруссии
                     </div>
                 </div>
+            </div>
+            <div class="main__lastCompanies">
                 <div class="item-main__lastCardBase">
                     <div class="item-main__headerLastCard">
                         <div class="item-main__logo">
@@ -480,6 +493,8 @@
                         логистических услуг.
                     </div>
                 </div>
+            </div>
+            <div class="main__lastCompanies">
                 <div class="item-main__lastCardBase">
                     <div class="item-main__headerLastCard">
                         <div class="item-main__logo">
@@ -586,7 +601,7 @@
 </div>
 <div class="footer">
     <div class="footer__menu">
-        <div class="footer__manager">
+        <div class="footer__block">
             <div class="item-footer__label">
                 Для менеджеров
             </div>
@@ -596,7 +611,7 @@
                 <a href="#">Кабинет менеджера</a>
             </div>
         </div>
-        <div class="footer__commenter">
+        <div class="footer__block">
             <div class="item-footer__label">
                 Для соискателей
             </div>
@@ -606,7 +621,7 @@
                 <a href="#">Компании по категориям</a>
             </div>
         </div>
-        <div class="footer__info">
+        <div class="footer__block">
             <div class="item-footer__label">
                 О ComplainBook
             </div>
@@ -616,7 +631,7 @@
                 <a href="#">Политика конфиденциальности</a>
             </div>
         </div>
-        <div class="footer__manager">
+        <div class="footer__block">
             <div class="item-footer__label">
                 Мы в соц. сетях
             </div>
@@ -658,12 +673,13 @@
     </div>
     <div class="footer__rights">
         <div class="item-footer__label">
-            © 2021. ComplainBook. Все права защищены.
+            © 2022. ComplainBook. Все права защищены.
         </div>
-        <div class="item-footer__creator">
+        <div class="item-footer__label">
             Разработка сайта Yahor Sviarchkou
         </div>
     </div>
 </div>
+<script src="./scripts/script.js"></script>
 </body>
 </html>

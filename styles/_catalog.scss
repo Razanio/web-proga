@@ -1,0 +1,172 @@
+.catalog{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 5% 6%;
+  @media (max-width: 1150px) {
+    flex-direction: column;
+  }
+  &__left{
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+    width: 30%;
+    @media (max-width: 1150px) {
+      width: 100%;
+      margin: 20px 0;
+    }
+  }
+  &__right{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    width: 70%;
+    @media (max-width: 1150px) {
+      width: 100%;
+      margin: 20px 0;
+    }
+  }
+  &__sort{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 30px 0;
+    padding: 5% 12%;
+    border: 0;
+    border-radius: 10px;
+    color: black;
+    @media (max-width: 1150px) {
+      margin: 10px 6% 20px 6%;
+    }
+  }
+  &__popular{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 30px 0;
+    border: 0;
+    border-radius: 10px;
+    color: black;
+    @media (max-width: 1150px) {
+      display: none;
+    }
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 30px 0;
+    border: 0;
+    border-radius: 10px;
+    color: black;
+    @media (max-width: 1150px) {
+      margin: 10px 6% 20px 6%;
+    }
+  }
+  &__grade{
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  &__gradeLine{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 3px 0;
+    &.left{
+      display: flex;
+      flex-direction: row;
+    }
+    &.right{
+      display: flex;
+      flex-direction: row;
+    }
+  }
+  &__top{
+    display: flex;
+    flex-direction: column;
+  }
+  &__company{
+    display: flex;
+    margin: 5% 15%;
+  }
+  &__userGrade{
+    display: flex;
+    flex-direction: row;
+    margin: 15px 6%;
+    align-items: center;
+  }
+  &__likes{
+    margin: 0 6% 10px 6%;
+    display: flex;
+    align-items: center;
+  }
+  &__answer{
+    margin: 15px 6%;
+    border: 0;
+    border-radius: 10px;
+    background-color: #f7e9e9;
+  }
+}
+.item-catalog{
+  &__city{
+    margin: 10px 0;
+    border: 0;
+    border-bottom: 2px solid black;
+    font-size: 20px;
+    padding: 5px 5px;
+  }
+  &__category{
+    margin: 10px 0;
+    border: 0;
+    border-bottom: 2px solid black;
+    font-size: 20px;
+    padding: 5px 0;
+  }
+  &__checkbox{
+    margin: 0 5px 0 0;
+    width: 18px;
+    height: 18px;
+  }
+  &__label{
+    margin: 15px 0;
+    font-size: 20px;
+    text-align: center;
+  }
+  &__info{
+    margin-left: 5%;
+  }
+  &__rate{
+    display: flex;
+    align-items: center;
+  }
+  &__userName{
+    margin: 20px 6%;
+    font-size: 25px;
+    font-family: 'Montserrat-Medium';
+  }
+  &__date{
+    margin: -10px 6% 20px 6%;
+  }
+  &__textLabel{
+    margin: 0 6% 15px 6%;
+    font-size: 20px;
+    font-family: 'Montserrat-Medium';
+  }
+  &__text{
+    margin: 15px 6%;
+    font-size: 19px;
+    line-height: 1.5;
+  }
+  &__like{
+    margin-right: 10px;
+  }
+  &__count{
+    font-size: 20px;
+  }
+  &__connect{
+    margin: 20px 6%;
+  }
+}
